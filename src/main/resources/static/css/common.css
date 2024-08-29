@@ -1,0 +1,355 @@
+@charset "UTF-8";
+
+/**
+	공통 CSS
+**/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ul, li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+body {
+	font-family: 'NanumSquareNeo';
+}
+
+.btn, select {
+	cursor: pointer;
+}
+
+::placeholder {
+	color: #bababa;
+}
+
+::selection {
+	background-color: #ff2588;
+	color: #fff;
+}
+
+.eng {
+	font-family: 'Tium';
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+#wrap {
+	position: relative;
+}
+
+#in--wrap {
+	width: 980px;
+	margin: auto;
+}
+
+.flex--wrap {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.top--title h1 {
+	color: #ff2588;
+	font-size: 52px;
+	margin-top: 150px;
+	margin-bottom: 50px;
+}
+
+.login--wrap {
+	display: flex;
+	flex-direction: column;
+}
+
+.login--wrap input {
+	margin-bottom: 15px;
+}
+
+.login--wrap input {
+	width: 380px;
+	height: 30px;
+	border: 1px solid #dcdcdc;
+	background-color: #fafafa;
+	border-radius: 6px;
+	padding: 10px;
+}
+
+#login--btn {
+	width: 400px;
+	height: 50px;
+	background-color: #ff2588;
+	color: #fff;
+	border: 0;
+	border-radius: 6px;
+	font-size: 16px;
+}
+
+#join--btn {
+	width: 400px;
+	height: 50px;
+	background-color: #ff2588;
+	color: #fff;
+	border: 0;
+	border-radius: 6px;
+	font-size: 16px;
+	margin-top: 50px;
+}
+
+.login--items {
+	margin: 50px 0 100px;
+}
+
+.social--login {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.login--line {
+	color: #bababa;
+	background-color: #fff;
+	position: relative;
+	z-index: 9;
+	margin-bottom: 50px;
+}
+
+.login--line::after {
+	content: "";
+	width: 107px;
+	height: 1px;
+	background-color: #bababa;
+	position: absolute;
+	left: -120px;
+	top: 8px;
+	z-index: 0;
+}
+
+.login--line::before {
+	content: "";
+	width: 100px;
+	height: 1px;
+	background-color: #bababa;
+	position: absolute;
+	left: 170px;
+	top: 8px;
+	z-index: 0;
+}
+
+.social--google {
+	border: 1px solid #bababa;
+	border-radius: 6px;
+	height: 49px;
+}
+
+/**
+ 회원가입 CSS start 
+ **/
+label {
+	font-size: 14px;
+	margin: 0 0 5px 5px;
+}
+
+.join--btn {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+}
+
+.duplication {
+	position: absolute;
+	width: 100px;
+	height: 30px;
+	border: 0;
+	border-radius: 6px;
+	top: 34px;
+	right: 10px;
+	color: #fff;
+	background-color: #ff2588;
+}
+
+.select--birth {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 15px;
+}
+
+.birth {
+	width: 30%;
+	height: 47px;
+	border: 1px solid #dcdcdc;
+	color: #bababa;
+	background-color: #fafafa;
+	border-radius: 6px;
+	padding: 10px;
+}
+
+.birth option {
+	font-family: 'NanumSquareNeo';
+}
+
+.gender--box {
+	display: flex;
+}
+
+.gender--items {
+	font-size: 14px;
+	margin: 5px 15px 0 10px;
+}
+
+.gender--box input[type="radio"] {
+	appearance: none;
+	-webkit-appearance: none;
+	width: 25px;
+	height: 25px;
+	border: 1px solid #dcdcdc;
+	background-color: #fafafa;
+	position: relative;
+	border-radius: 4px;
+}
+
+.gender--box input[type="radio"]:checked {
+	background-color: #ff2588;
+	border: 1px solid #ff2588
+}
+
+.gender--box input[type="radio"]:checked::after {
+	content: '';
+	display: block;
+	width: 10px;
+	height: 15px;
+	border: solid #fff;
+	border-width: 0 4px 4px 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -74%) rotate(45deg);
+}
+
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.notice--list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 20px;
+}
+
+.notice--list table {
+	width: 80%;
+	border-collapse: collapse;
+}
+
+.notice--list th, .notice--list td {
+	padding: 10px;
+	text-align: center;
+}
+
+.notice--list th {
+	background-color: #f4f4f4;
+}
+
+.notice--list td {
+	border: 1px solid #ddd;
+}
+
+.notice--title {
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+/* 이미지 미리보기 박스 스타일 */
+.profile--img .thumb--image {
+	width: 100px; /* 고정된 너비 */
+	height: 100px; /* 고정된 높이 */
+	overflow: hidden; /* 이미지가 박스를 벗어나지 않도록 */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.profile--img .thumb--image img {
+	width: 100%; /* 너비에 맞추어 크기 조정 */
+	height: auto; /* 비율 유지 */
+	object-fit: cover; /* 이미지가 박스를 완전히 채우도록 */
+}
+/*이벤트 페이지*/
+.evt--title {
+	height: 60px;
+	padding-top: 30px;
+	border-bottom: 3px solid black;
+	font-size: 100%;
+	margin-top: 20px;
+	margin: 0;
+	padding: 0;
+	border: 1;
+	vertical-align: baseline;
+	word-break: break-all;
+}
+
+.evt--area {
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	border: 1;
+	vertical-align: baseline;
+	word-break: break-all;
+}
+
+.evt--area--menu {
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-around;
+	font-size: large;
+	margin-bottom: 30px;
+}
+
+.evt--prize {
+	color: red;
+}
+.evt--item-container{
+    display: flex;
+    margin: 40px;
+    padding: 40px;
+    margin-inline: 215px;
+    flex-wrap: wrap;
+}
+
+.evt--item{
+	display: flex;
+	margin: 10px;
+	padding: 10px;
+}
+
+.evt--item--a {
+	margin: 25px;
+}
+
+.evt--prize--win {
+	border: 2px solid #fb4357;
+	background-color: #fb4357;
+	color: #ffffff;
+}
+
+.event--images{
+	border: 1px solid #000;
+}
+
+.evt--item--detail{
+	display: block;
+    margin-inline: 15%;
+    padding: 10px;
+}
